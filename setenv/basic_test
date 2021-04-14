@@ -1,3 +1,9 @@
 setenv hello world
 setenv hola holberton
 setenv hello .....
+
+#expected results
+# hello=world
+# hello=holberton
+# hello=.....
+# each have to be replaced.
