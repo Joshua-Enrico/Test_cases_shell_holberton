@@ -1,4 +1,5 @@
-# run ls
+#!/bin/bash
+# run ls with spaces
 command="ls         -l"
 
 tmp_file="checker_tmp_file_$RANDOM"
