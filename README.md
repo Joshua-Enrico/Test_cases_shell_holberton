@@ -2,10 +2,10 @@
 
 ## Configuration
 
-Clone the repo in your simple_shell directorie.
-Open the file config and update the variable SHELL with your shell.
+Clone the repo.
+Paste your shell executable file inside the "Test_cases_shell_holberton" directorie.
+Open the file config and update the variable SHELL with the name of your shell.
 
 ## Run
 
 Usage ./check_simple_shell.bash
-
