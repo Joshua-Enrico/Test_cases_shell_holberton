@@ -27,8 +27,10 @@ diff output1 output2 > result
 rm output1
 rm output2
 
+nmatch=`cat result | grep getline | wc -l`
+
 # print the result
-if [ -e result ];
+if [ $nmatch -eq 0 ]
 then
 	   print_ok
 else
