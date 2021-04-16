@@ -1,0 +1,30 @@
+#!/bin/bash
+# Checks for cd command and pwd output
+
+command="cd | pwd"
+tmp_file="checker_tmp_file_$RANDOM"
+# clean up
+stop_shell
+rm -f $tmp_file
+# create a pseudo random file
+touch $tmp_file
+# send commands
+echo "$command" | sh > output1 2> /dev/null &
+echo "$command" | $SHELL > output2 2> /dev/null &
+# wait a little bit
+$SLEEP $SLEEPSECONDS
+# check the result
+diff output1 output2 > result
+rm output1
+rm output2
+# print the result
+if [ -e result ];
+then
+	   print_ok
+else
+	   print_ko
+fi
+rm result
+# clean up
+stop_shell
+rm -f $tmp_file
