@@ -1,6 +1,4 @@
 #!/bin/bash
-#
-# check command /bin/ls is not found if the PATH is empty
 
 command="alias lst=/bin/ls qwe=/bin/echo asd
 alias qwe lst
